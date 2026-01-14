@@ -142,13 +142,101 @@ footer { background-color: var(--primary); padding: 80px 0; border-top: 1px soli
 .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; transition: transform 0.3s; text-decoration: none; cursor: pointer; }
 .whatsapp-btn:hover { transform: scale(1.1); background-color: #128C7E; }
 
+/* --- NUCLEAR MOBILE FIX --- */
 @media screen and (max-width: 768px) {
-    .cursor-dot, .cursor-outline { display: none; }
-    * { cursor: auto; }
+    
+    /* 1. THE NUCLEAR CUT (Stops all wobbling) */
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+        position: relative;
+    }
+
+    /* 2. CONTAIN ALL SECTIONS */
+    section, header, footer, .hero {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden; /* Double lock */
+    }
+
+    /* 3. HERO REPAIRS (Fixes text stacking) */
+    .hero { 
+        padding-top: 100px; 
+        padding-bottom: 50px; 
+        height: auto; 
+        min-height: 100vh; /* Allow it to grow if text is long */
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 0 15px; /* Add breathing room on sides */
+    }
+
+    .hero h1 { 
+        font-size: 2rem; /* Smaller to fit phone */
+        line-height: 1.1;
+        margin-bottom: 15px;
+        word-wrap: break-word; /* Prevent long names from breaking layout */
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    /* 4. BUTTONS (Stack them nicely) */
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        display: block;
+        margin: 0;
+        text-align: center;
+    }
+
+    /* 5. FIX TIMELINE (The usual wobble suspect) */
+    .timeline {
+        padding: 0 10px;
+    }
+    .timeline::after { left: 31px; } 
+    .timeline-item { 
+        width: 100%; 
+        padding-left: 70px; 
+        padding-right: 0; 
+        margin-bottom: 30px;
+    }
+    .timeline-item:nth-child(even) { left: 0; }
+    
+    /* Force dots to line up */
+    .timeline-item::after, 
+    .timeline-item:nth-child(even)::after { 
+        left: 21px; 
+    }
+
+    /* 6. DISABLE CURSOR (Phones hate custom cursors) */
+    .cursor-dot, .cursor-outline { display: none !important; }
+    * { cursor: auto !important; }
+
+    /* 7. GALLERY & GRIDS */
+    .grid-4, .services-grid, .gallery-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .gallery-item {
+        height: 250px;
+        width: 100%;
+    }
+
+    /* 8. NAVBAR & LOGO */
     .nav-links { display: none; }
-    .hero h1 { font-size: 2.5rem; }
-    .timeline::after { left: 31px; }
-    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-    .timeline-item::after { left: 23px; }
-    .timeline-item:nth-child(even) { left: 0%; }
+    .logo { font-size: 1.2rem; }
 }
