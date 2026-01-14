@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ajay Rawat | NACE Level 3 Coating Inspector & AMPP Specialist</title>
+    <meta name="description" content="Freelance NACE Level 3 Certified Coating Inspector (Cert No. 23277) & ISO Lead Auditor based in Mundra, Gujarat. Expert in 3LPE, TSA, and QA/QC for NEOM, Total E&P, and LNG Canada projects.">
+    <meta name="keywords" content="Ajay Kumar Rawat, NACE Level 3 Inspector, AMPP Certified, Coating Specialist India, Freelance Inspector Mundra, ISO 9001 Lead Auditor, Third Party Inspection Gujarat, 3LPE Expert">
+    <meta name="author" content="Ajay Kumar Rawat">
+
+    <meta property="og:title" content="Ajay Rawat - Global Inspection Authority">
+    <meta property="og:description" content="NACE Level 3 (AMPP) & ISO Lead Auditor with 22+ years experience. Available for global deputation.">
+    <meta property="og:image" content="{{ url_for('static', filename='hero-bg.jpg') }}">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ajay Kumar Rawat",
+      "jobTitle": "NACE Level 3 Certified Coating Inspector",
+      "affiliation": { "@type": "Organization", "name": "Freelance / AMPP" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Mundra", "addressRegion": "Gujarat", "addressCountry": "India" },
+      "knowsAbout": ["Protective Coatings", "ISO 17025", "Failure Analysis", "Pipeline Inspection", "AMPP"]
+    }
+    </script>
+
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="loading">
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <div id="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h2>Loading Authority Profile...</h2>
+        </div>
+    </div>
+
+    <div id="hireModal" class="modal-overlay">
+        <div class="modal-card" data-aos="zoom-in">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <h3>INITIATE CONTACT</h3>
+                <div class="modal-line"></div>
+            </div>
+            <p class="modal-desc">Select a secure channel to discuss inspection requirements.</p>
+            
+            <div class="modal-grid">
+                <a href="tel:+919426983432" class="modal-option">
+                    <div class="modal-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <div class="modal-text"><span>Direct Line</span><strong>+91 94269 83432</strong></div>
+                </a>
+                <a href="https://wa.me/919426983432" target="_blank" class="modal-option">
+                    <div class="modal-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="modal-text"><span>Instant Chat</span><strong>WhatsApp</strong></div>
+                </a>
+                <a href="mailto:rawatajaykumar2010@gmail.com" class="modal-option">
+                    <div class="modal-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <div class="modal-text"><span>Official Email</span><strong>Send Brief</strong></div>
+                </a>
+            </div>
+            <div class="modal-footer"><p>Available for Global Deputation</p></div>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">AJAY RAWAT<span class="gold-dot">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Projects</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">History</a></li>
+                <li><a href="javascript:void(0)" class="nav-btn" onclick="openModal()">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero" style="background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.75)), url('{{ url_for('static', filename='hero-bg.jpg') }}'); background-size: cover; background-position: center;">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <p class="tagline">Global Inspection Authority</p>
+            <h1>Ajay Kumar Rawat</h1>
+            
+            <h2>NACE Level 3 Certified <span class="gold-text">|</span> <span class="typewriter"></span></h2>
+            
+            <p class="sub-text">22+ Years of Excellence in Oil & Gas, Petrochemical, and Heavy Engineering.</p>
+            
+            <div class="signature">Ajay Kumar Rawat</div>
+
+            <div class="hero-btns">
+                <a href="javascript:void(0)" class="btn btn-primary" onclick="openModal()">Hire for Inspection</a>
+                <a href="{{ url_for('static', filename='cv.pdf') }}" class="btn btn-outline" download>
+                    <i class="fa-solid fa-download"></i> Download CV
+                </a>
+            </div>
+
+            <div class="credentials-bar">
+                <span><i class="fa-solid fa-certificate"></i> NACE Level 3 (#23277)</span>
+                <span><i class="fa-solid fa-shield-halved"></i> AMPP Specialist</span>
+                <span><i class="fa-solid fa-check-double"></i> ISO 9001 Lead Auditor</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="logo-strip">
+        <div class="container">
+            <p class="logo-text">Trusted by Industry Leaders:</p>
+            <div class="logos">
+                <span class="client-name">NEOM Saudi Arabia</span>
+                <span class="client-name">Total Energies</span>
+                <span class="client-name">Bureau Veritas</span>
+                <span class="client-name">LNG Canada</span>
+                <span class="client-name">Intertek</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="stats-section">
+        <div class="container grid-4">
+            <div class="stat-box" data-aos="zoom-in" data-aos-delay="100">
+                <h3 data-target="22" data-plus="true">0</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="stat-box" data-aos="zoom-in" data-aos-delay="200">
+                <h3>ISO 17025</h3>
+                <p>Lab Expert</p>
+            </div>
+            <div class="stat-box" data-aos="zoom-in" data-aos-delay="300">
+                <h3>Global</h3>
+                <p>Projects (Saudi, Uganda)</p>
+            </div>
+            <div class="stat-box" data-aos="zoom-in" data-aos-delay="400">
+                <h3 data-target="3" data-plus="false">0</h3>
+                <p>NACE Level 3</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-title text-white" data-aos="fade-up">
+                <h2>On-Site Operations</h2>
+                <div class="line line-gold"></div>
+                <p style="color: #8892b0; margin-top: 10px;">Visual documentation of recent inspection projects.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="{{ url_for('static', filename='inspection1.jpg') }}" alt="Coating Inspection">
+                    <div class="overlay-text">Surface Testing</div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="{{ url_for('static', filename='site-view.jpg') }}" alt="Pipeline Yard">
+                    <div class="overlay-text">Project Site</div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="{{ url_for('static', filename='team.jpg') }}" alt="Inspection Team">
+                    <div class="overlay-text">Technical Team Leadership</div>
+                </div>
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="{{ url_for('static', filename='inspection2.jpg') }}" alt="Detailed Inspection">
+                    <div class="overlay-text">Quality Assurance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Technical Expertise</h2>
+                <div class="line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Advanced Coating Systems</h3>
+                    <p>Expert inspection of 3LPE, 3LPP, FBE, TSA (Thermal Spray Aluminium), and Fire Proofing systems.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box"><i class="fa-solid fa-flask"></i></div>
+                    <h3>Lab & Failure Analysis</h3>
+                    <p>ISO 17025 Lab Management, Adhesion Testing, Cathodic Disbandment, and complex Failure Analysis.</p>
+                </div>
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <h3>Auditing & Compliance</h3>
+                    <p>ISO 9001:2015 Lead Auditor, API SPEC Q1, and Inspection Test Plan (ITP) verification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-title text-white" data-aos="fade-up">
+                <h2>Global Project History</h2>
+                <div class="line line-gold"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="date">Nov 2025 – Present</span>
+                        <h3>Bureau Veritas India</h3>
+                        <h4>Freelance NACE Level 3 Inspector</h4>
+                        <p>Providing third-party inspection services for high-value protective coating applications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <span class="date">Sep 2024 – Nov 2025</span>
+                        <h3>Tilenga Project (Total E&P)</h3>
+                        <h4>Uganda</h4>
+                        <p>Managed coating inspections for critical piping assets and spools for Total Energies.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="date">Mar 2023 – Sep 2024</span>
+                        <h3>NEOM Infrastructure</h3>
+                        <h4>Saudi Arabia</h4>
+                        <p>QA/QC oversight for the world's largest infrastructure project, ensuring strict environmental compliance.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <span class="date">2003 – 2021</span>
+                        <h3>Jindal Saw Ltd</h3>
+                        <h4>Technical Manager (18 Years)</h4>
+                        <p>Led ISO 17025 accredited lab operations and supervised 3LPE/FBE applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container text-center" data-aos="zoom-in">
+            <h2>Ready for Inspection?</h2>
+            <p>Available for freelance projects globally.</p>
+            <div class="contact-info">
+                <a href="mailto:rawatajaykumar2010@gmail.com" class="contact-link"><i class="fa-solid fa-envelope"></i> rawatajaykumar2010@gmail.com</a>
+                <a href="tel:+919426983432" class="contact-link"><i class="fa-solid fa-phone"></i> +91 94269 83432</a>
+            </div>
+            <p class="copyright">© 2026 Ajay Kumar Rawat. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919426983432?text=Hello%20Mr.%20Ajay,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project." class="whatsapp-btn" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    
+    <script>
+        AOS.init();
+
+        // 1. Custom Cursor
+        const cursorDot = document.querySelector('[data-cursor-dot]');
+        const cursorOutline = document.querySelector('[data-cursor-outline]');
+        window.addEventListener("mousemove", function(e) {
+            const posX = e.clientX; const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`; cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 500, fill: "forwards" });
+        });
+
+        // 2. Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => { preloader.style.display = 'none'; document.body.classList.remove('loading'); }, 500);
+        });
+
+        // 3. Typewriter
+        var typed = new Typed('.typewriter', {
+            strings: ['AMPP Specialist', 'ISO Lead Auditor', 'Coating Expert', 'Lab Manager'],
+            typeSpeed: 50, backSpeed: 30, backDelay: 2000, loop: true
+        });
+
+        // 4. Counters
+        const counters = document.querySelectorAll('.stat-box h3[data-target]');
+        const speed = 200; 
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText.replace('+', '');
+                    const inc = target / speed;
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        if(counter.getAttribute('data-plus') === 'true') counter.innerText += "+";
+                        setTimeout(updateCount, 50);
+                    } else {
+                        counter.innerText = target;
+                        if(counter.getAttribute('data-plus') === 'true') counter.innerText += "+";
+                    }
+                };
+                updateCount();
+            });
+        }
+
+        // 5. Modal Logic
+        function openModal() {
+            const modal = document.getElementById('hireModal');
+            modal.style.display = 'flex';
+            setTimeout(() => { modal.classList.add('active'); }, 10);
+        }
+        function closeModal() {
+            const modal = document.getElementById('hireModal');
+            modal.classList.remove('active');
+            setTimeout(() => { modal.style.display = 'none'; }, 300);
+        }
+        window.onclick = function(event) {
+            const modal = document.getElementById('hireModal');
+            if (event.target == modal) { closeModal(); }
+        }
+
+        // 6. Scroll Logic
+        let scrolled = false;
+        window.onscroll = function() {
+            // Navbar
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+            
+            // Progress Bar
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolledPct = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolledPct + "%";
+
+            // Counters
+            if (!scrolled && window.scrollY > 300) { animateCounters(); scrolled = true; }
+        };
+    </script>
+</body>
+</html>
