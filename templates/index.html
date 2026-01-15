@@ -263,7 +263,7 @@
             if (event.target == document.getElementById('hireModal')) { closeModal(); }
         }
 
-        // PARTICLE CONFIG (Non-Interactive)
+        // FIXED: Non-Interactive Particle Flow (Won't stop on scroll)
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 30 },
@@ -283,8 +283,8 @@
             "interactivity": {
                 "detect_on": "canvas",
                 "events": { 
-                    "onhover": { "enable": false }, 
-                    "onclick": { "enable": false }, 
+                    "onhover": { "enable": false }, /* Touch disabled */
+                    "onclick": { "enable": false }, /* Click disabled */
                     "resize": true
                 }
             },
