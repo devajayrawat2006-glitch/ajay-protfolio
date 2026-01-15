@@ -8,6 +8,7 @@
       gtag('js', new Date());
       gtag('config', 'G-4M0DS6BG7K');
     </script>
+    
     <meta name="google-site-verification" content="-S6ziyypELc8qnNaKWvifsP9DEy4HhuLpLWvU-x8drw" />
 
     <meta charset="UTF-8">
@@ -31,15 +32,15 @@
         <div class="modal-card" data-aos="zoom-in">
             <button class="close-modal" onclick="closeModal()">&times;</button>
             <div class="modal-header">
-                <h3>SCHEDULE CONSULTATION</h3>
+                <h3>REQUEST INSPECTION AUDIT</h3>
                 <div class="line" style="width: 50px; height: 3px; background: #D35400; margin: 10px 0;"></div>
             </div>
-            <p style="margin: 15px 0; color: #666; font-size: 0.9rem;">Select a direct channel for project inquiries.</p>
+            <p style="margin: 15px 0; color: #666; font-size: 0.9rem;">Direct priority channels for project managers.</p>
             
             <div class="modal-grid">
                 <a href="{{ url_for('static', filename='ajay_rawat.vcf') }}" class="modal-option" download>
                     <div class="modal-icon"><i class="fa-solid fa-address-card" style="color: #D35400; font-size: 1.2rem;"></i></div>
-                    <div class="modal-text"><span>vCard</span><strong>Save to Contacts</strong></div>
+                    <div class="modal-text"><span>vCard</span><strong>Save Contact</strong></div>
                 </a>
                 <a href="tel:+919426983432" class="modal-option">
                     <div class="modal-icon"><i class="fa-solid fa-phone" style="color: #002B49; font-size: 1.2rem;"></i></div>
@@ -57,16 +58,25 @@
         <div class="nav-container">
             <div class="logo">AJAY RAWAT<span class="accent-text">.</span></div>
             <ul class="nav-links">
-                <li><a href="#expertise">Services</a></li>
-                <li><a href="#experience">Track Record</a></li>
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Projects</a></li>
                 <li><a href="#gallery">Site Ops</a></li>
-                <li><a href="javascript:void(0)" class="nav-btn" onclick="openModal()">Check Availability</a></li>
+                <li><a href="javascript:void(0)" class="nav-btn" onclick="openModal()">Request Audit</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero" style="background: linear-gradient(rgba(0, 43, 73, 0.9), rgba(0, 43, 73, 0.8)), url('{{ url_for('static', filename='hero-bg.jpg') }}'); background-size: cover; background-position: center;">
+    <header class="hero">
         
+        <div class="hero-slider">
+            <img src="{{ url_for('static', filename='slide1.jpg') }}" class="hero-slide" alt="Site Inspection">
+            <img src="{{ url_for('static', filename='slide2.jpg') }}" class="hero-slide" alt="Site Inspection">
+            <img src="{{ url_for('static', filename='slide3.jpg') }}" class="hero-slide" alt="Site Inspection">
+            <img src="{{ url_for('static', filename='slide4.jpg') }}" class="hero-slide" alt="Site Inspection">
+        </div>
+
+        <div class="hero-overlay"></div>
+
         <div id="particles-js" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></div>
 
         <div class="container hero-content" data-aos="fade-up" style="position: relative; z-index: 2;">
@@ -75,17 +85,16 @@
                 <i class="fa-solid fa-medal"></i> 22+ YEARS INDUSTRIAL AUTHORITY
             </div>
 
-            <h1>SENIOR NACE LEVEL 3 <br><span class="accent-text">COATING INSPECTOR</span></h1>
+            <h1>PREVENT COSTLY <br><span class="accent-text">ASSET FAILURE.</span></h1>
             
             <p class="sub-text">
-                Mitigating asset risk through expert QA/QC, ISO 9001 Auditing, and Coating Integrity Assurance.
-                <br>
-                <strong>Trusted by:</strong> NEOM, Total Energies, LNG Canada.
+                Secure NACE Level 3 Expertise for <strong>Coating Integrity, QA/QC & ISO Auditing</strong>.
+                Mitigate risk before it impacts your project timeline.
             </p>
 
             <div class="hero-actions">
-                <a href="javascript:void(0)" class="btn btn-primary" onclick="openModal()">Check Project Availability</a>
-                <a href="{{ url_for('static', filename='cv.pdf') }}" class="text-link" download>Download Professional CV <i class="fa-solid fa-arrow-down"></i></a>
+                <a href="javascript:void(0)" class="btn btn-primary" onclick="openModal()">Request Inspection Audit</a>
+                <a href="{{ url_for('static', filename='cv.pdf') }}" class="btn-text-only" download>View Professional Credentials (CV)</a>
             </div>
 
             <div class="trust-bar">
@@ -96,14 +105,14 @@
         </div>
     </header>
 
-    <div class="logo-strip" style="background: #002B49; padding: 40px 0;">
+    <div class="logo-strip">
         <div class="container text-center">
-            <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px;">DEPLOYED ON PROJECTS FOR</p>
-            <div class="logos" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
-                <span class="client-name" style="color: #fff; font-family: 'Oswald'; font-size: 1.5rem; opacity: 0.9;">NEOM</span>
-                <span class="client-name" style="color: #fff; font-family: 'Oswald'; font-size: 1.5rem; opacity: 0.9;">TOTAL ENERGIES</span>
-                <span class="client-name" style="color: #fff; font-family: 'Oswald'; font-size: 1.5rem; opacity: 0.9;">BUREAU VERITAS</span>
-                <span class="client-name" style="color: #fff; font-family: 'Oswald'; font-size: 1.5rem; opacity: 0.9;">INTERTEK</span>
+            <p class="logo-text">TRUSTED BY GLOBAL ENERGY LEADERS</p>
+            <div class="logos">
+                <span class="client-name">NEOM</span>
+                <span class="client-name">TOTAL ENERGIES</span>
+                <span class="client-name">BUREAU VERITAS</span>
+                <span class="client-name">INTERTEK</span>
             </div>
         </div>
     </div>
@@ -111,57 +120,59 @@
     <section id="expertise" class="section-padding">
         <div class="container">
             <div class="text-center" style="margin-bottom: 60px;" data-aos="fade-up">
-                <h2>Technical Competencies</h2>
+                <h2>Inspection Solutions</h2>
                 <div style="width: 60px; height: 4px; background: #002B49; margin: 15px auto;"></div>
             </div>
             <div class="services-grid">
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div style="font-size: 2.5rem; color: #002B49; margin-bottom: 15px;"><i class="fa-solid fa-shield-virus"></i></div>
-                    <h3>Coating Integrity</h3>
-                    <p style="font-size: 0.95rem;">Ensuring asset longevity through strict adherence to NACE/AMPP standards.</p>
+                    <h3>Coating Integrity Assurance</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">Prevent premature corrosion and failure on critical assets.</p>
                     <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> 3LPE, 3LPP, FBE & TSA Systems</li>
-                        <li><i class="fa-solid fa-check"></i> Surface Preparation Validation</li>
-                        <li><i class="fa-solid fa-check"></i> Environmental Compliance</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Systems:</strong> 3LPE, 3LPP, FBE & TSA</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Validation:</strong> Surface Prep & Application</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Result:</strong> Extended Asset Lifespan</li>
                     </ul>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div style="font-size: 2.5rem; color: #002B49; margin-bottom: 15px;"><i class="fa-solid fa-microscope"></i></div>
-                    <h3>Failure Analysis</h3>
-                    <p style="font-size: 0.95rem;">Root-cause investigation and data-backed verification for coating failures.</p>
+                    <h3>Failure Analysis & Lab</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">Data-backed investigation into coating defects.</p>
                     <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> Adhesion & Cathodic Disbondment</li>
-                        <li><i class="fa-solid fa-check"></i> ISO 17025 Lab Management</li>
-                        <li><i class="fa-solid fa-check"></i> Defect Documentation</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Testing:</strong> Adhesion & Cathodic Disbondment</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Standard:</strong> ISO 17025 Accredited Lab Mgmt</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Result:</strong> Verified Root Cause Analysis</li>
                     </ul>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div style="font-size: 2.5rem; color: #002B49; margin-bottom: 15px;"><i class="fa-solid fa-file-contract"></i></div>
-                    <h3>Third-Party Auditing</h3>
-                    <p style="font-size: 0.95rem;">Comprehensive auditing for vendor qualification and quality management.</p>
+                    <h3>Third-Party Auditing (TPI)</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px;">Ensure vendors meet international quality standards.</p>
                     <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> ISO 9001:2015 Lead Auditor</li>
-                        <li><i class="fa-solid fa-check"></i> Inspection Test Plan (ITP) Verification</li>
-                        <li><i class="fa-solid fa-check"></i> Pre-Production Meetings</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Audit:</strong> ISO 9001:2015 Lead Auditor</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Verify:</strong> Inspection Test Plans (ITP)</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Result:</strong> 100% Regulatory Compliance</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="confidence-strip">
+    <div class="engagement-strip">
         <div class="container" data-aos="fade-in">
-            <p class="confidence-text">
-                <i class="fa-solid fa-quote-left" style="color: #D35400; margin-right: 10px;"></i>
-                Delivering uncompromised quality assurance for multi-million dollar assets across 3 continents.
+            <p class="engagement-text">
+                Need to reduce risk on your next pipeline or refinery project?
             </p>
+            <div style="margin-top: 25px;">
+                <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary" style="background: transparent; border: 2px solid white;">Consult With An Expert</a>
+            </div>
         </div>
     </div>
 
     <section id="experience" class="section-padding bg-light">
         <div class="container">
             <div class="text-center" style="margin-bottom: 60px;" data-aos="fade-up">
-                <h2>Project Track Record</h2>
+                <h2>Proven Track Record</h2>
                 <div style="width: 60px; height: 4px; background: #002B49; margin: 15px auto;"></div>
             </div>
             <div class="timeline">
@@ -186,10 +197,6 @@
                     <p>18-year tenure leading an ISO 17025 accredited laboratory. Managed a large team and oversaw pipeline coating operations (3LPE/FBE) for global export.</p>
                 </div>
             </div>
-            
-            <div class="text-center" style="margin-top: 40px;">
-                <a href="{{ url_for('static', filename='cv.pdf') }}" class="btn btn-navy" download>View Full Project History (CV)</a>
-            </div>
         </div>
     </section>
 
@@ -200,7 +207,7 @@
                 <div style="width: 60px; height: 4px; background: #002B49; margin: 15px auto;"></div>
             </div>
             <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                 <div style="height: 250px; overflow: hidden; position: relative;" data-aos="fade-up" data-aos-delay="100">
+                <div style="height: 250px; overflow: hidden; position: relative;" data-aos="fade-up" data-aos-delay="100">
                     <img src="{{ url_for('static', filename='inspection1.jpg') }}" style="width: 100%; height: 100%; object-fit: cover;">
                     <div style="position: absolute; bottom: 0; background: rgba(0,0,0,0.7); color: white; width: 100%; padding: 10px; font-family: 'Oswald'; font-size: 0.9rem;">SURFACE TESTING</div>
                 </div>
@@ -225,7 +232,7 @@
             <h2>Secure A Coating Expert</h2>
             <p style="max-width: 600px; margin: 20px auto; color: #666;">Available for short-term and long-term global deputation. Ensure your project meets the highest international standards.</p>
             <div style="margin-top: 30px;">
-                <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary">Schedule Technical Consultation</a>
+                <a href="javascript:void(0)" onclick="openModal()" class="btn btn-navy">Schedule Technical Consultation</a>
             </div>
             <div style="margin-top: 50px; opacity: 0.6; font-size: 0.85rem;">
                 &copy; 2026 Ajay Kumar Rawat. All Rights Reserved.
@@ -256,7 +263,7 @@
             if (event.target == document.getElementById('hireModal')) { closeModal(); }
         }
 
-        // Particle Config
+        // PARTICLE CONFIG (Non-Interactive)
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 30 },
@@ -264,10 +271,24 @@
                 "shape": { "type": "circle" },
                 "opacity": { "value": 0.3 },
                 "size": { "value": 3 },
-                "line_linked": { "enable": true, "distance": 150, "color": "#D35400", "opacity": 0.2, "width": 1 },
-                "move": { "enable": true, "speed": 1 }
+                "line_linked": { 
+                    "enable": true, 
+                    "distance": 150, 
+                    "color": "#D35400", 
+                    "opacity": 0.2, 
+                    "width": 1 
+                },
+                "move": { "enable": true, "speed": 1.5, "direction": "none", "out_mode": "out" }
             },
-            "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" } } }
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": { 
+                    "onhover": { "enable": false }, 
+                    "onclick": { "enable": false }, 
+                    "resize": true
+                }
+            },
+            "retina_detect": true
         });
     </script>
 </body>

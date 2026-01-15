@@ -1,4 +1,4 @@
-/* --- REFINED INDUSTRIAL THEME (ENGAGEMENT FOCUSED) --- */
+/* --- EXECUTIVE INDUSTRIAL THEME (CONVERSION OPTIMIZED) --- */
 :root {
     --navy: #002B49;          
     --navy-light: #004270;    
@@ -21,9 +21,9 @@ body {
     overflow-x: hidden;
 }
 
-/* TYPOGRAPHY - High Contrast for Readability */
+/* TYPOGRAPHY */
 h1, h2, h3, h4 { font-family: var(--font-head); color: var(--navy); text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px; }
-h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; color: var(--white); }
+h1 { font-size: 3.8rem; line-height: 1.1; margin-bottom: 25px; color: var(--white); }
 h2 { font-size: 2.2rem; margin-bottom: 15px; }
 h3 { font-size: 1.4rem; margin-bottom: 15px; }
 p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
@@ -35,17 +35,46 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 .text-center { text-align: center; }
 .bg-light { background-color: var(--off-white); }
 
-/* --- HERO SECTION (Clear & Direct) --- */
+/* --- HERO SECTION (Action Focused) --- */
 .hero {
-    min-height: 90vh; /* Reduced slightly to show content below fold */
+    min-height: 90vh;
     display: flex;
     align-items: center;
     position: relative;
     padding-top: 80px;
+    overflow: hidden; 
+    background: #002B49;
+    z-index: 0;
 }
 
-.hero-content { max-width: 800px; }
+/* Slideshow Layers */
+.hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; }
+.hero-slide {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
+    opacity: 0; animation: slideAnimation 24s infinite; 
+}
+.hero-slide:nth-child(1) { animation-delay: 0s; }
+.hero-slide:nth-child(2) { animation-delay: 6s; }
+.hero-slide:nth-child(3) { animation-delay: 12s; }
+.hero-slide:nth-child(4) { animation-delay: 18s; }
 
+.hero-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(0, 43, 73, 0.95), rgba(0, 43, 73, 0.8)); /* Darker overlay for text readability */
+    z-index: -1;
+}
+
+@keyframes slideAnimation {
+    0% { opacity: 0; transform: scale(1); }
+    4% { opacity: 1; }
+    25% { opacity: 1; }
+    29% { opacity: 0; transform: scale(1.1); }
+    100% { opacity: 0; }
+}
+
+.hero-content { max-width: 850px; position: relative; z-index: 2; }
+
+/* Badge */
 .experience-badge {
     display: inline-block;
     background: var(--orange);
@@ -59,19 +88,20 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 }
 
 .sub-text {
-    font-size: 1.3rem; /* Larger for readability */
+    font-size: 1.25rem;
     color: #dfe6e9;
-    max-width: 650px;
+    max-width: 700px;
     margin-bottom: 35px;
     font-weight: 300;
-    line-height: 1.5;
+    border-left: 4px solid var(--orange);
+    padding-left: 20px;
 }
 
-/* ONE PRIMARY BUTTON STRATEGY */
-.hero-actions { display: flex; align-items: center; gap: 25px; margin-top: 30px; }
+/* BUTTONS - The "One Primary" Strategy */
+.hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 15px; margin-top: 30px; }
 
 .btn {
-    padding: 16px 32px;
+    padding: 18px 40px;
     font-family: var(--font-head);
     font-weight: 600;
     letter-spacing: 1px;
@@ -81,32 +111,33 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    font-size: 1.1rem;
 }
 
 .btn-primary { 
     background: var(--orange); 
     color: var(--white); 
-    box-shadow: 0 4px 15px rgba(211, 84, 0, 0.4); /* Subtle shadow for lift */
+    box-shadow: 0 4px 15px rgba(211, 84, 0, 0.4); 
 }
 .btn-primary:hover { background: #a04000; transform: translateY(-2px); }
 
-/* Secondary Text Link (Instead of fighting button) */
-.text-link {
-    color: var(--white);
-    text-decoration: underline;
-    font-size: 1rem;
+.btn-text-only {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
     font-weight: 500;
-    text-underline-offset: 4px;
-    opacity: 0.9;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 2px;
+    transition: 0.3s;
 }
-.text-link:hover { color: var(--orange); opacity: 1; }
+.btn-text-only:hover { color: var(--orange); border-color: var(--orange); }
 
-.btn-navy { background: var(--navy); color: var(--white); }
+.btn-navy { background: var(--navy); color: var(--white); font-size: 1rem; }
 .btn-navy:hover { background: var(--navy-light); }
 
 /* TRUST BAR */
 .trust-bar {
-    margin-top: 60px;
+    margin-top: 50px;
     display: flex;
     gap: 40px;
     border-top: 1px solid rgba(255,255,255,0.15);
@@ -115,43 +146,48 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 .trust-item { color: var(--white); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; display: flex; align-items: center; gap: 10px;}
 .trust-item i { color: var(--orange); }
 
-/* --- SERVICES (Bullet Points) --- */
+/* SERVICES (Outcome Focused) */
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
 .service-card {
     background: var(--white);
     padding: 40px;
-    border-top: 4px solid var(--navy);
+    border-top: 5px solid var(--navy);
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 .service-card:hover { border-top-color: var(--orange); transform: translateY(-5px); }
 
-/* Service Bullets */
-.service-list { list-style: none; margin-top: 15px; }
+.service-list { list-style: none; margin-top: 20px; }
 .service-list li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
     font-size: 0.95rem;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    color: #555;
+    gap: 12px;
+    color: #444;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
 }
+.service-list li:last-child { border-bottom: none; }
 .service-list li i { color: var(--orange); margin-top: 5px; font-size: 0.8rem; }
 
-/* --- CONFIDENCE STRIP (Micro Engagement) --- */
-.confidence-strip {
+/* ENGAGEMENT STRIP */
+.engagement-strip {
     background: var(--navy);
-    padding: 40px 0;
+    padding: 50px 0;
     text-align: center;
+    border-bottom: 5px solid var(--orange);
 }
-.confidence-text {
+.engagement-text {
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: var(--font-head);
     letter-spacing: 1px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* --- TIMELINE --- */
+/* TIMELINE */
 .timeline { border-left: 3px solid #dfe6e9; margin-left: 10px; padding: 10px 0; }
 .timeline-item { padding-left: 40px; margin-bottom: 50px; position: relative; }
 .timeline-item::before {
@@ -170,17 +206,28 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 .nav-links a:hover { color: var(--orange); }
 .nav-btn { background: var(--orange); color: white !important; padding: 8px 20px; font-weight: 600; }
 
-@media screen and (max-width: 768px) {
-    html { font-size: 90%; }
-    .hero { padding-top: 100px; text-align: left; }
-    .hero-actions { flex-direction: column; align-items: flex-start; gap: 20px; }
-    .trust-bar { flex-direction: column; gap: 15px; border-top: none; }
-    .nav-links { display: none; }
-}
+/* LOGO STRIP */
+.logo-strip { background: var(--navy); padding: 50px 0; }
+.logo-text { color: rgba(255,255,255,0.6); font-size: 0.85rem; letter-spacing: 3px; margin-bottom: 25px; text-transform: uppercase; }
+.logos { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
+.client-name { color: #fff; font-family: 'Oswald'; font-size: 1.5rem; opacity: 0.8; }
 
-/* Modal same as before but cleaner */
-.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,43,73,0.9); z-index: 2000; justify-content: center; align-items: center; }
+/* MODAL */
+.modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,43,73,0.95); z-index: 2000; justify-content: center; align-items: center; }
 .modal-card { background: var(--white); padding: 40px; border-top: 5px solid var(--orange); max-width: 450px; width: 90%; position: relative; }
 .close-modal { position: absolute; top: 10px; right: 15px; font-size: 25px; border: none; background: none; cursor: pointer; color: #555;}
 .modal-option { display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; text-decoration: none; color: var(--navy); border: 1px solid #e0e0e0; transition: 0.3s; margin-bottom: 10px; }
-.modal-option:hover { border-color: var(--navy); background: #eeffff; }
+.modal-option:hover { border-color: var(--navy); background: #e3f2fd; }
+
+/* --- MOBILE OPTIMIZATION --- */
+@media screen and (max-width: 768px) {
+    html { font-size: 75%; } 
+    h1 { font-size: 2.5rem !important; line-height: 1.2; margin-bottom: 15px; }
+    h2 { font-size: 1.8rem !important; }
+    .hero { padding-top: 90px; padding-bottom: 40px; height: auto; min-height: 85vh; text-align: left; }
+    .hero-actions { align-items: stretch; width: 100%; }
+    .btn { width: 100%; text-align: center; }
+    .btn-text-only { text-align: center; display: block; padding: 10px; border: none;}
+    .trust-bar { flex-direction: column; gap: 10px; margin-top: 30px; align-items: flex-start; }
+    .nav-links { display: none; }
+}
