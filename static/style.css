@@ -233,31 +233,44 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 .modal-option { display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; text-decoration: none; color: var(--navy); border: 1px solid #e0e0e0; transition: 0.3s; margin-bottom: 10px; }
 .modal-option:hover { border-color: var(--navy); background: #e3f2fd; }
 
-/* --- FINAL MOBILE OPTIMIZATION (Perfect Size & Stability) --- */
+/* --- FINAL MOBILE FIX (Slim Bar & Stable Screen) --- */
 @media screen and (max-width: 768px) {
-    /* 1. TEXT SIZE ADJUSTMENT (Thoda sa bada kiya - 80%) */
+    /* 1. TEXT SIZE (80% is the sweet spot) */
     html { font-size: 80%; } 
-
-    /* 2. STOP BACKGROUND MOVEMENT (Nuclear Fix) */
-    .hero-slide {
-        animation: mobileFade 24s infinite !important; /* Force fade only */
-        transform: none !important; /* Force STOP moving */
-        -webkit-transform: none !important; /* Safari/iPhone fix */
+    
+    /* 2. LOCK SCREEN WIDTH (Stops horizontal moving/wobble) */
+    body, html {
+        overflow-x: hidden !important;
+        width: 100%;
+        position: relative;
     }
 
-    /* 3. REMOVE PARTICLES */
+    /* 3. SLIM NAVIGATION BAR */
+    .navbar { 
+        padding: 10px 0 !important; /* Thinner bar */
+    }
+    .logo { 
+        font-size: 1.3rem !important; /* Smaller text so it fits */
+    }
+
+    /* 4. STOP BACKGROUND MOVEMENT */
+    .hero-slide {
+        animation: mobileFade 24s infinite !important;
+        transform: none !important;
+        -webkit-transform: none !important;
+    }
     #particles-js { display: none !important; }
 
-    /* 4. HERO LAYOUT */
+    /* 5. HERO LAYOUT ADJUSTMENTS */
     h1 { 
-        font-size: 2.5rem !important; /* Thoda bada kiya */
+        font-size: 2.5rem !important; 
         line-height: 1.2;
         margin-bottom: 20px;
     }
     h2 { font-size: 2rem !important; }
     
     .hero { 
-        padding-top: 100px; 
+        padding-top: 85px; /* Less gap since nav is thinner */
         padding-bottom: 50px; 
         height: auto; 
         min-height: 85vh; 
@@ -265,7 +278,7 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
     }
     
     .hero-actions { align-items: stretch; width: 100%; }
-    .btn { width: 100%; text-align: center; padding: 16px; font-size: 1.1rem; }
+    .btn { width: 100%; text-align: center; padding: 15px; font-size: 1.1rem; }
     
     .trust-bar { 
         flex-direction: column; 
