@@ -68,7 +68,7 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
     0% { opacity: 0; transform: scale(1); }
     4% { opacity: 1; }
     25% { opacity: 1; }
-    29% { opacity: 0; transform: scale(1.1); }
+    29% { opacity: 0; transform: scale(1.05);}
     100% { opacity: 0; }
 }
 
@@ -219,11 +219,17 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 .modal-option { display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; text-decoration: none; color: var(--navy); border: 1px solid #e0e0e0; transition: 0.3s; margin-bottom: 10px; }
 .modal-option:hover { border-color: var(--navy); background: #e3f2fd; }
 
-/* --- AGGRESSIVE MOBILE FIX --- */
+/* --- FINAL MOBILE OPTIMIZATION (Smooth & Clean) --- */
 @media screen and (max-width: 768px) {
-    html { font-size: 70%; } /* Shrink base size */
+    /* 1. AGGRESSIVE TEXT SHRINKING (Fixes "Too Big" issue) */
+    html { font-size: 70%; } 
 
-    /* Force Headline Size Down */
+    /* 2. HIDE PARTICLES ON MOBILE (Fixes "Stopping/Freezing" issue) */
+    #particles-js { 
+        display: none !important; 
+    }
+
+    /* 3. HERO ADJUSTMENTS */
     h1 { 
         font-size: 2.2rem !important; 
         line-height: 1.2;
@@ -239,15 +245,19 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
         text-align: left;
     }
     
+    /* 4. BUTTONS & LAYOUT */
     .hero-actions { align-items: stretch; width: 100%; }
-    .btn { width: 100%; text-align: center; }
-    .btn-text-only { text-align: center; display: block; padding: 10px; border: none;}
+    .btn { width: 100%; text-align: center; padding: 15px; }
+    .btn-text-only { text-align: center; display: block; padding: 10px; border: none; }
     
+    /* 5. TRUST BAR STACKING */
     .trust-bar { 
         flex-direction: column; 
-        gap: 10px; 
+        gap: 12px; 
         margin-top: 30px; 
         align-items: flex-start; 
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 20px;
     }
     
     .nav-links { display: none; }
