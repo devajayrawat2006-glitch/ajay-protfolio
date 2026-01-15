@@ -1,4 +1,4 @@
-/* --- EXECUTIVE INDUSTRIAL THEME (STABLE MOBILE) --- */
+/* --- EXECUTIVE INDUSTRIAL THEME (FINAL STABLE VERSION) --- */
 :root {
     --navy: #002B49;          
     --navy-light: #004270;    
@@ -18,7 +18,7 @@ body {
     color: #2d3436;
     font-family: var(--font-body);
     line-height: 1.6;
-    overflow-x: hidden; /* Stops side-scrolling */
+    overflow-x: hidden;
     width: 100%;
 }
 
@@ -51,7 +51,7 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 /* Slideshow Container */
 .hero-slider { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; }
 
-/* Desktop Animation (Zooms & Fades) */
+/* DESKTOP ANIMATION (Zoom allowed here) */
 .hero-slide {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;
     opacity: 0; 
@@ -68,16 +68,16 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
     z-index: -1;
 }
 
-/* DESKTOP ZOOM KEYFRAMES */
+/* DESKTOP KEYFRAMES (Has Zoom) */
 @keyframes slideAnimation {
     0% { opacity: 0; transform: scale(1); }
     4% { opacity: 1; }
     25% { opacity: 1; }
-    29% { opacity: 0; transform: scale(1.1); } /* Zoom Effect */
+    29% { opacity: 0; transform: scale(1.1); }
     100% { opacity: 0; }
 }
 
-/* MOBILE FADE KEYFRAMES (No Zoom) */
+/* MOBILE KEYFRAMES (FADE ONLY - NO ZOOM) */
 @keyframes mobileFade {
     0% { opacity: 0; }
     4% { opacity: 1; }
@@ -233,25 +233,46 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 .modal-option { display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; text-decoration: none; color: var(--navy); border: 1px solid #e0e0e0; transition: 0.3s; margin-bottom: 10px; }
 .modal-option:hover { border-color: var(--navy); background: #e3f2fd; }
 
-/* --- CRITICAL MOBILE FIXES --- */
+/* --- FINAL MOBILE OPTIMIZATION (Perfect Size & Stability) --- */
 @media screen and (max-width: 768px) {
-    html { font-size: 70%; } 
+    /* 1. TEXT SIZE ADJUSTMENT (Thoda sa bada kiya - 80%) */
+    html { font-size: 80%; } 
 
-    /* 1. FORCE USE OF FADE-ONLY ANIMATION (Stops the "moving screen" effect) */
+    /* 2. STOP BACKGROUND MOVEMENT (Nuclear Fix) */
     .hero-slide {
-        animation-name: mobileFade !important; /* Overrides zoom */
+        animation: mobileFade 24s infinite !important; /* Force fade only */
+        transform: none !important; /* Force STOP moving */
+        -webkit-transform: none !important; /* Safari/iPhone fix */
     }
 
-    /* 2. REMOVE PARTICLES COMPLETELY */
+    /* 3. REMOVE PARTICLES */
     #particles-js { display: none !important; }
 
-    /* 3. HERO LAYOUT */
-    h1 { font-size: 2.2rem !important; line-height: 1.2; margin-bottom: 15px; }
-    h2 { font-size: 1.8rem !important; }
-    .hero { padding-top: 90px; padding-bottom: 40px; height: auto; min-height: 85vh; text-align: left; }
-    .hero-actions { align-items: stretch; width: 100%; }
-    .btn { width: 100%; text-align: center; }
+    /* 4. HERO LAYOUT */
+    h1 { 
+        font-size: 2.5rem !important; /* Thoda bada kiya */
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    h2 { font-size: 2rem !important; }
     
-    .trust-bar { flex-direction: column; gap: 10px; margin-top: 30px; align-items: flex-start; }
+    .hero { 
+        padding-top: 100px; 
+        padding-bottom: 50px; 
+        height: auto; 
+        min-height: 85vh; 
+        text-align: left;
+    }
+    
+    .hero-actions { align-items: stretch; width: 100%; }
+    .btn { width: 100%; text-align: center; padding: 16px; font-size: 1.1rem; }
+    
+    .trust-bar { 
+        flex-direction: column; 
+        gap: 15px; 
+        margin-top: 35px; 
+        align-items: flex-start; 
+    }
+    
     .nav-links { display: none; }
 }
