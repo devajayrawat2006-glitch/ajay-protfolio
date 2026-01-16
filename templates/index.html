@@ -58,7 +58,7 @@
         <div class="nav-container">
             <div class="logo">AJAY RAWAT<span class="accent-text">.</span></div>
             <ul class="nav-links">
-                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#expertise">Services</a></li>
                 <li><a href="#experience">Projects</a></li>
                 <li><a href="#gallery">Site Ops</a></li>
                 <li><a href="javascript:void(0)" class="nav-btn" onclick="openModal()">Request Audit</a></li>
@@ -117,6 +117,24 @@
         </div>
     </div>
 
+    <section class="profile-section" data-aos="fade-up">
+        <div class="container profile-container">
+            <div class="profile-img-box">
+                <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Ajay Rawat - NACE Level 3 Inspector" class="profile-photo">
+            </div>
+            
+            <div class="profile-bio">
+                <h3>Meet The Technical Authority</h3>
+                <p>
+                    With over two decades in heavy engineering and oil & gas, I provide the independent expertise needed to ensure asset integrity. My role is to bridge the gap between project specifications and on-site reality, delivering uncompromised quality assurance for high-value operations.
+                </p>
+                <div class="signature-line">
+                    <i class="fa-solid fa-file-signature"></i> Ajay Rawat | NACE L3 #23277
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="expertise" class="section-padding">
         <div class="container">
             <div class="text-center" style="margin-bottom: 60px;" data-aos="fade-up">
@@ -127,31 +145,31 @@
                 <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                     <div style="font-size: 2.5rem; color: #002B49; margin-bottom: 15px;"><i class="fa-solid fa-shield-virus"></i></div>
                     <h3>Coating Integrity Assurance</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 15px;">Prevent premature corrosion and failure on critical assets.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px; color: #666;"><strong>Problem:</strong> Premature corrosion on critical assets.</p>
                     <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> <strong>Systems:</strong> 3LPE, 3LPP, FBE & TSA</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Validation:</strong> Surface Prep & Application</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Result:</strong> Extended Asset Lifespan</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Solution:</strong> Strict NACE/AMPP Standards (3LPE, FBE)</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Verification:</strong> Surface Prep & Application Checks</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Outcome:</strong> Extended Asset Lifespan</li>
                     </ul>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                     <div style="font-size: 2.5rem; color: #002B49; margin-bottom: 15px;"><i class="fa-solid fa-microscope"></i></div>
                     <h3>Failure Analysis & Lab</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 15px;">Data-backed investigation into coating defects.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px; color: #666;"><strong>Problem:</strong> Unexplained coating defects or disputes.</p>
                     <ul class="service-list">
+                        <li><i class="fa-solid fa-check"></i> <strong>Solution:</strong> Root Cause Analysis & ISO 17025 Lab</li>
                         <li><i class="fa-solid fa-check"></i> <strong>Testing:</strong> Adhesion & Cathodic Disbondment</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Standard:</strong> ISO 17025 Accredited Lab Mgmt</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Result:</strong> Verified Root Cause Analysis</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Outcome:</strong> Data-Backed Verification</li>
                     </ul>
                 </div>
                 <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                     <div style="font-size: 2.5rem; color: #002B49; margin-bottom: 15px;"><i class="fa-solid fa-file-contract"></i></div>
                     <h3>Third-Party Auditing (TPI)</h3>
-                    <p style="font-size: 0.95rem; margin-bottom: 15px;">Ensure vendors meet international quality standards.</p>
+                    <p style="font-size: 0.95rem; margin-bottom: 15px; color: #666;"><strong>Problem:</strong> Vendor non-compliance and quality gaps.</p>
                     <ul class="service-list">
-                        <li><i class="fa-solid fa-check"></i> <strong>Audit:</strong> ISO 9001:2015 Lead Auditor</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Verify:</strong> Inspection Test Plans (ITP)</li>
-                        <li><i class="fa-solid fa-check"></i> <strong>Result:</strong> 100% Regulatory Compliance</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Solution:</strong> ISO 9001:2015 Lead Auditor Oversight</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Verify:</strong> Inspection Test Plan (ITP) Adherence</li>
+                        <li><i class="fa-solid fa-check"></i> <strong>Outcome:</strong> 100% Regulatory Compliance</li>
                     </ul>
                 </div>
             </div>
@@ -161,7 +179,7 @@
     <div class="engagement-strip">
         <div class="container" data-aos="fade-in">
             <p class="engagement-text">
-                Need to reduce risk on your next pipeline or refinery project?
+                Need inspection support before project execution?
             </p>
             <div style="margin-top: 25px;">
                 <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary" style="background: transparent; border: 2px solid white;">Consult With An Expert</a>
@@ -263,7 +281,7 @@
             if (event.target == document.getElementById('hireModal')) { closeModal(); }
         }
 
-        // FIXED: Non-Interactive Particle Flow (Won't stop on scroll)
+        // NON-INTERACTIVE PARTICLES
         particlesJS("particles-js", {
             "particles": {
                 "number": { "value": 30 },

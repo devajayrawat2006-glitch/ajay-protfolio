@@ -233,6 +233,78 @@ p { font-size: 1.05rem; margin-bottom: 15px; color: #444; }
 .modal-option { display: flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; text-decoration: none; color: var(--navy); border: 1px solid #e0e0e0; transition: 0.3s; margin-bottom: 10px; }
 .modal-option:hover { border-color: var(--navy); background: #e3f2fd; }
 
+
+/* --- PROFILE INTRO SECTION (New) --- */
+.profile-section {
+    padding: 80px 0;
+    background: var(--white);
+    border-bottom: 1px solid #eee;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile-img-box {
+    flex: 0 0 280px; /* Fixed width for photo area */
+    position: relative;
+}
+
+/* Making the photo look professional */
+.profile-photo {
+    width: 280px;
+    height: 280px;
+    object-fit: cover; /* Ensures photo doesn't stretch */
+    border-radius: 50%; /* Makes it circular */
+    border: 5px solid var(--navy); /* Professional border */
+    box-shadow: 0 10px 30px rgba(0,43,73,0.2); /* Subtle shadow for depth */
+}
+
+/* The Intro Text next to photo */
+.profile-bio h3 { 
+    font-size: 1.8rem; 
+    margin-bottom: 15px; 
+    color: var(--navy);
+}
+.profile-bio p {
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* A small signature-style credential */
+.signature-line {
+    font-family: var(--font-head);
+    color: var(--orange);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.signature-line i { font-size: 1.2rem; }
+
+/* MOBILE FIX FOR PROFILE PHOTO */
+@media screen and (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* Stack vertically on phone */
+        text-align: center;
+        gap: 30px;
+    }
+    .profile-img-box { flex: auto; }
+    .profile-photo {
+        width: 200px; /* Smaller on phone */
+        height: 200px;
+        margin: 0 auto; /* Center it */
+    }
+    .profile-bio p, .signature-line { margin-left: auto; margin-right: auto; }
+}
+
+
 /* --- FINAL MOBILE FIX (Slim Bar & Stable Screen) --- */
 @media screen and (max-width: 768px) {
     /* 1. TEXT SIZE (80% is the sweet spot) */
